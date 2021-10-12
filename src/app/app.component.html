@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="spinner-container" *ngIf="loadingService.isLoading">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>
+<section [class.blur]="loadingService.isLoading">
+  <router-outlet></router-outlet>
+</section>
